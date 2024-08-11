@@ -1,5 +1,5 @@
 :root {
-    --pink: #f14e95;
+    --pink: #fe7ec0;
     --bg: #0a0a0a;
     --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
@@ -11,7 +11,6 @@ html {
 body {
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
-    min-height: 5000px;
 }
 
 .hero::before {
@@ -64,6 +63,10 @@ body {
     color: white;
 }
 
+.hero .btn {
+    margin-top: 2rem;
+}
+
 .mynavbar {
     background-color: rgba(255, 255, 255, 0.3) !important; 
     backdrop-filter: blur(4px);
@@ -71,6 +74,8 @@ body {
 
 .mynavbar .offcanvas {
     height: 100vh;
+    width: 60vh;
+    border-radius: 1.5rem;
 }
 
 .mynavbar .navbar-brand,
@@ -82,6 +87,11 @@ body {
 
 .mynavbar .nav-link {
     text-transform: uppercase;
+}
+
+.mynavbar a:hover {
+    background-color: rgb(255, 197, 228);
+    transition: 1s;
 }
 
 .home {
@@ -154,11 +164,6 @@ body {
 
 .info .alamat {
     font-size: 1.1rem;
-}
-
-.info iframe {
-    width: 40%;
-    height: 30%;
 }
 
 .info .description {
@@ -345,7 +350,7 @@ body {
 }
 
 footer {
-    padding: 3rem;
+    padding: 2rem;
     background-color: var(--pink);
     color: white;
 }
@@ -462,6 +467,18 @@ footer li {
         margin: 5px;
     }
 
+    .hero h1 {
+        margin: 1.5rem 0 1.5rem;
+    }
+
+    .hero p {
+        margin: 2rem 0 1.4rem;
+    }
+
+    .hero .btn {
+        margin-top: 4rem;
+    }
+
     .mynavbar .nav-link {
         font-size: 2rem;
         text-align: center;
@@ -471,9 +488,18 @@ footer li {
         overflow: hidden;
     }
 
+    .info iframe {
+        width: 50%;
+        height: 20%;
+    } 
+
     .timeline li .timeline-image {
         width: 140px;
         height: 140px;
+    }
+
+    .rsvp form {
+        margin: 0 2rem 0;
     }
 }
 
@@ -486,6 +512,14 @@ footer li {
     .simply-countdown > .simply-section {
         padding: 45px;
         margin: 3px;
+    }
+
+    .home .couple h3 {
+        padding-top: 1rem;
+    }
+
+    .home .couple .anak {
+        padding: 1rem 0 1rem;
     }
 
     .timeline li .timeline-image {
@@ -505,5 +539,4 @@ footer li {
     .timeline li .timeline-panel::after {
         top: 31px;
     }
-
 }
