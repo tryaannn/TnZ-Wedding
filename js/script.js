@@ -29,8 +29,6 @@ simplyCountdown(".simply-countdown", {
     countUp: false, // enable count up if set to true
   });
 
-
-
 const stickyTop = document.querySelector('.sticky-top');
 const offcanvas = document.querySelector('.offcanvas');
 
@@ -41,8 +39,6 @@ offcanvas.addEventListener('show.bs.offcanvas', function() {
 offcanvas.addEventListener('hidden.bs.offcanvas', function() {
     stickyTop.style.overflow = 'hidden';
 });
-
-
 
 const rootElement = document.querySelector(":root");
 function disableScroll() {
@@ -71,8 +67,6 @@ function disableScroll() {
   // disableScroll();
 // }
 disableScroll();
-
-
 
 window.addEventListener("load", function() {
   const form = document.getElementById('my-form');
