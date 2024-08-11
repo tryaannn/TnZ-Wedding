@@ -29,6 +29,8 @@ simplyCountdown(".simply-countdown", {
     countUp: false, // enable count up if set to true
   });
 
+
+
 const stickyTop = document.querySelector('.sticky-top');
 const offcanvas = document.querySelector('.offcanvas');
 
@@ -38,4 +40,52 @@ offcanvas.addEventListener('show.bs.offcanvas', function() {
 
 offcanvas.addEventListener('hidden.bs.offcanvas', function() {
     stickyTop.style.overflow = 'hidden';
+});
+
+
+
+const rootElement = document.querySelector(":root");
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  window.onscroll = function () {
+    window.scrollTo(scrollTop, scrollLeft);
+  }
+
+  rootElement.style.scrollBehavior = 'auto';
+}
+  function enableScroll() {
+    window.onscroll = function () {}
+      rootElement.style.scrollBehavior = 'smooth';
+      // localStorage.setItem('opened', 'true');
+      playAudio();
+  }
+
+  function playAudio() {
+    const song = document.querySelector('#song');
+    song.play()
+  }
+
+// if(!localStorage.getItem('opened')) {
+  // disableScroll();
+// }
+disableScroll();
+
+
+
+window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Konfirmasi kehadiran berhasil!");
+    })
+  });
 });
